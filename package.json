@@ -1,0 +1,15 @@
+{
+    "engines": {
+        "node": ">=7.2.1"
+    },
+    "main": "./www/app.js",
+    "private": true,
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon --exec \"yarn run build && yarn run start\"",
+        "build": "echo 'Build done!'"
+    },
+    "dependencies": {
+        "http-proxy": "https://radionet_build:wY5psk3O5H8FmUGRhBactkX2@gitlab.com/peerbelt-repo/node-http-proxy.git#1.18.2"
+    }
+}
