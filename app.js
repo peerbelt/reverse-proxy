@@ -16,7 +16,7 @@ var binding = {
         target: {
             host: "192.168.1.5",
             port: 3000
-	}
+    }
     },
     "*.dyndns.info": {
         target: {
@@ -55,7 +55,7 @@ httpProxy.createServer({
   binding: binding,
   target: {
     host: "192.168.1.5",
-    port: 3000
+    port: 3001
   }
 }).listen(3080)
 .on( "error", socketErrorHandler );
