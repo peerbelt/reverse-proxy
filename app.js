@@ -8,19 +8,20 @@
 
 var httpProxy = require( "http-proxy" );
 var fs = require( "fs" );
+var webHost = process.env.WEB_HOST || "192.168.1.14";
 //
 // Create the HTTPS proxy server in front of a HTTP server
 //
 var binding = {
     "*.peerbelt.com": {
         target: {
-            host: "192.168.1.5",
+            host: webHost,
             port: 3000
     }
     },
     "*.dyndns.info": {
         target: {
-            host: "192.168.1.5",
+            host: webHost,
             port: 3001
         }
     }
@@ -40,7 +41,7 @@ function socketErrorHandler( err, req ) {
 httpProxy.createServer({
   binding: binding,
   target: {
-    host: "192.168.1.5",
+    host: webHost,
     port: 3000
   },
   ssl: {
@@ -54,7 +55,7 @@ httpProxy.createServer({
 httpProxy.createServer({
   binding: binding,
   target: {
-    host: "192.168.1.5",
+    host: webHost,
     port: 3001
   }
 }).listen(3080)
