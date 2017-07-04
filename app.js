@@ -9,6 +9,7 @@
 var httpProxy = require( "http-proxy" );
 var fs = require( "fs" );
 var webHost = process.env.WEB_HOST || "192.168.1.14";
+var radioHost = process.env.RADIO_HOST || " 192.168.1.19";
 //
 // Create the HTTPS proxy server in front of a HTTP server
 //
@@ -24,6 +25,12 @@ var binding = {
             host: webHost,
             port: 3001
         }
+    },
+    "*.radionet.live": {
+        target: {
+            host: radioHost,
+            port: 8000
+        }      
     }
 };
 
