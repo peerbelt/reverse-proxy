@@ -26,10 +26,16 @@ var binding = {
             port: 3001
         }
     },
-    "*.radionet.live": {
+    "sonos.radionet.live": {
         target: {
             host: radioHost,
             port: 8000
+        }      
+    },
+    "*.radionet.live": {
+        target: {
+            host: radioHost,
+            port: 3000
         }      
     }
 };
