@@ -14,11 +14,17 @@ var radioHost = process.env.RADIO_HOST || "192.168.1.19";
 // Create the HTTPS proxy server in front of a HTTP server
 //
 var binding = {
+    "saas.peerbelt.com": {
+        target: {
+            host: webHost,
+            port: 3200
+      }
+    },
     "*.peerbelt.com": {
         target: {
             host: webHost,
             port: 3000
-    }
+      }
     },
     "*.dyndns.info": {
         target: {
