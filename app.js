@@ -22,12 +22,14 @@ var binding = {
     },   
     "www.peerbelt.com": {
         target: {
-            forward: "https://saas.peerbelt.com/"
+            host: webHost,
+            port: 3001
       }
     },
     "peerbelt.com": {
         target: {
-            forward: "https://saas.peerbelt.com/"
+            host: webHost,
+            port: 3001
       }
     },
     "*.peerbelt.com": {
