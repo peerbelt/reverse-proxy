@@ -22,8 +22,14 @@ var binding = {
     },   
     "www.peerbelt.com": {
         target: {
-            host: webHost,
-            port: 3200
+            host: "saas.peerbelt.com",
+            port: 433
+      }
+    },
+    "peerbelt.com": {
+        target: {
+            host: "saas.peerbelt.com",
+            port: 433
       }
     },
     "*.peerbelt.com": {
