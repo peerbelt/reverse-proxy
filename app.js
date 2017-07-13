@@ -50,6 +50,12 @@ var binding = {
             port: 8000
         }      
     },
+    "publisher.radionet.live" : {
+        target: {
+            host: radioHost,
+            port: 4000
+        }      
+    },
     "*.radionet.live": {
         target: {
             host: radioHost,
